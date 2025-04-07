@@ -20,6 +20,33 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Part 1: Editor Setup
+Uses @tiptap/starter-kit for basic rich-text editing functionality.
+Supports paragraphs, headings, lists, blockquotes, and more.
+Tailwind CSS used for UI styling.
+
+## Part 2: Callout Node Component
+A custom callout block with the following capabilities:
+Callout Types:
+information
+best-practice
+warning
+error
+Features:
+Add callouts using the shortcut: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>
+Slash command support: Type /callout in the editor
+Change type dynamically via UI
+Nested callouts are fully supported
+Styled according to type
+
+## Part 3: AI Inline Edits (Design Doc)
+Key Components:
+Text selection triggers a prompt modal
+Instruction input sent to an LLM via API
+Render AI output with diff using ProseMirror decorations
+Users can accept or reject inline changes
+Maintains compatibility with custom nodes (e.g., callouts)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
